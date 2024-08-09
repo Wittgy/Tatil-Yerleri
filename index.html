@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatil Listesi</title>
+    <link rel="stylesheet" href="vacation.css">
+</head>
+<body>
+    <header>
+        <h1>Tatil Yerleri Listesi</h1>
+        <p>İlginç yerleri keşfet ve aşağıdaki formu kullanarak listene kaydet!</p>
+    </header>
+    <main>
+        <form id="destination_details_form">
+            <label for="name">Gidilecek yer</label>
+            <input type="text" id="name" placeholder="Gidilecek yerin adını girin" required>
+
+            <label for="location">Yer Nerede?</label>
+            <input type="text" id="location" placeholder="Bulunduğu Ülke" required>
+
+            <label for="photo">Resim Ekle</label>
+            <input type="text" id="photo" placeholder="Resmin URL adresini girin" required>
+
+            <label for="description">Açıklama</label>
+            <textarea id="description" placeholder="Gidilecek yerin hakkında daha fazla bilgi girin" required></textarea>
+
+            <button type="submit">Listeye ekle</button>
+        </form>
+
+        <article>
+            <h2 id="title">Yeni lokasyonlar ekleyin</h2>
+            <div id="destinations_container">
+                <!-- Js ile müdahale edilecek alan -->
+            </div>
+        </article>
+    </main>
+
+
+    <script src="vacation.js"></script>
+</body>
+</html>
