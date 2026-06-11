@@ -4,39 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tatil Listesi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="vacation.css">
 </head>
 <body>
     <header>
-        <h1>Tatil Yerleri Listesi</h1>
-        <p>İlginç yerleri keşfet ve aşağıdaki formu kullanarak listene kaydet!</p>
+        <div class="header-content">
+            <div class="header-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            </div>
+            <h1>Tatil Yerleri Listesi</h1>
+            <p>İlginç yerleri keşfet ve aşağıdaki formu kullanarak listene kaydet!</p>
+        </div>
+        <div class="header-wave">
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0,50 C240,100 480,0 720,50 C960,100 1200,0 1440,50 L1440,100 L0,100 Z" fill="var(--bg-primary)"/></svg>
+        </div>
     </header>
     <main>
-        <form id="destination_details_form">
-            <label for="name">Gidilecek yer</label>
-            <input type="text" id="name" placeholder="Gidilecek yerin adını girin" required>
-
-            <label for="location">Yer Nerede?</label>
-            <input type="text" id="location" placeholder="Bulunduğu Ülke" required>
-
-            <label for="photo">Resim Ekle</label>
-            <input type="text" id="photo" placeholder="Resmin URL adresini girin" required>
-
-            <label for="description">Açıklama</label>
-            <textarea id="description" placeholder="Gidilecek yerin hakkında daha fazla bilgi girin" required></textarea>
-
-            <button type="submit">Listeye ekle</button>
-        </form>
-
-        <article>
-            <h2 id="title">Yeni lokasyonlar ekleyin</h2>
-            <div id="destinations_container">
-                <!-- Js ile müdahale edilecek alan -->
-            </div>
-        </article>
+        <div class="main-inner">
+            <aside class="form-section">
+                <div class="form-card">
+                    <div class="form-card-header">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+                        Yeni Lokasyon Ekle
+                    </div>
+                    <form id="destination_details_form">
+                        <div class="input-group">
+                            <label for="name">Gidilecek yer</label>
+                            <input type="text" id="name" placeholder="Örn: Bali, Paris..." required>
+                        </div>
+                        <div class="input-group">
+                            <label for="location">Yer Nerede?</label>
+                            <input type="text" id="location" placeholder="Örn: Endonezya, Fransa" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="photo">Resim Ekle</label>
+                            <input type="text" id="photo" placeholder="Resmin URL adresini girin" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="description">Açıklama</label>
+                            <textarea id="description" placeholder="Bu yer hakkında bilgi verin..." required></textarea>
+                        </div>
+                        <button type="submit">
+                            <span class="btn-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+                            </span>
+                            Listeye ekle
+                        </button>
+                    </form>
+                </div>
+            </aside>
+            <section class="cards-section">
+                <h2 id="title">Yeni lokasyonlar ekleyin</h2>
+                <div id="destinations_container">
+                    <!-- Js ile müdahale edilecek alan -->
+                </div>
+            </section>
+        </div>
     </main>
-
-
     <script src="vacation.js"></script>
 </body>
 </html>
